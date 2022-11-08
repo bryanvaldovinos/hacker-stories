@@ -48,11 +48,18 @@ const List = () => (
     </ul>
   );
 
-const Search = () => (
+
+function HandleChange(event) {
+  console.log(event.target.value);
+};
+
+const Search = () => {
+  return (
     <div>
       <label htmlFor='search'>Search: </label>
-      <input id='search' type='text'/>
+      <input id='search' type='text' onChange={HandleChange}/>
     </div>
-  );
+  )
+}
 
 export default App;
